@@ -1,0 +1,16 @@
+---
+import TermsPage from "@/components/infopages/Terms.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import type { AstroSeoProps } from "@astrolib/seo";
+
+const seo: AstroSeoProps = {
+	title: "Términos de Servicio - solucion.io: Entiende nuestros términos",
+	description:
+		"Lee los Términos de Servicio de solucion.io. Conoce nuestras directrices y tus responsabilidades al usar nuestras soluciones tecnológicas.",
+	canonical: "https://solucion.io/es/terms/",
+};
+---
+
+<BaseLayout seo={seo}>
+	<TermsPage />
+</BaseLayout>

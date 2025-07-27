@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+import type { AstroSeoProps } from "@astrolib/seo";
+import Authors from "@components/blog/Authors.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const allAuthors = await getCollection("authors");
+const pageTitle = "Tag Index";
+
+const seo: AstroSeoProps = {
+	title: "Autores - solucion.io: Conoce a nuestro equipo experto",
+	description:
+		"Descubre las mentes creativas detrás de solucion.io. Nuestros autores son expertos de la industria en soluciones tecnológicas, automatización de ventas y servicio al cliente, compartiendo valiosos conocimientos.",
+	canonical: "https://solucion.io/es/author/",
+};
+---
+
+<BaseLayout seo={seo}>
+	<Authors />
+</BaseLayout>

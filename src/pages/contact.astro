@@ -1,0 +1,16 @@
+---
+import Contact from "@/components/forms/Contact.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import type { AstroSeoProps } from "@astrolib/seo";
+
+const seo: AstroSeoProps = {
+	title: "Contacta a solucion.io: Obtén soluciones tecnológicas innovadoras",
+	description:
+		"Contacta a solucion.io para soluciones tecnológicas expertas. Conéctate con nosotros para discutir tu proyecto y explorar soluciones web de vanguardia.",
+	canonical: "https://solucion.io/es/contact/",
+};
+---
+
+<BaseLayout seo={seo}>
+	<Contact />
+</BaseLayout>

@@ -1,0 +1,16 @@
+---
+import PrivacyPage from "@/components/infopages/Privacy.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import type { AstroSeoProps } from "@astrolib/seo";
+
+const seo: AstroSeoProps = {
+	title: "Política de Privacidad - solucion.io: Tu privacidad importa",
+	description:
+		"Nuestra Política de Privacidad describe cómo solucion.io protege tu información personal. Descubre nuestro compromiso con tu privacidad y seguridad de datos.",
+	canonical: "https://solucion.io/es/privacy/",
+};
+---
+
+<BaseLayout seo={seo}>
+	<PrivacyPage />
+</BaseLayout>

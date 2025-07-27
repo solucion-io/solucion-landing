@@ -1,0 +1,46 @@
+---
+import type { AstroSeoProps } from "@astrolib/seo";
+import Articles from "@components/blog/Articles.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const seo: AstroSeoProps = {
+	title: "solucion.io Blog: Información y actualizaciones sobre soluciones tecnológicas",
+	description:
+		"Explora el Blog de solucion.io para conocer las últimas tendencias, consejos y perspectivas en soluciones tecnológicas, automatización de ventas y servicio al cliente. Mantente actualizado con nuestras innovadoras soluciones digitales.",
+	canonical: "https://solucion.io/es/blog/",
+	openGraph: {
+		url: "https://solucion.io/blog",
+		title: "solucion.io Blog: Información y actualizaciones sobre soluciones tecnológicas",
+		description:
+			"Mantente informado con lo último en soluciones tecnológicas, automatización de ventas y servicio al cliente en el Blog de solucion.io. Te esperan consejos de expertos, trucos y perspectivas de la industria.",
+		images: [
+			{
+				url: "https://picsum.photos/1200/630",
+				width: 1200,
+				height: 630,
+				alt: "Imagen de Open Graph social del Blog de solucion.io",
+				type: "image/jpeg",
+			},
+			{
+				url: "https://picsum.photos/4096/4096",
+				width: 4096,
+				height: 4096,
+				alt: "Imagen de Open Graph de Twitter del Blog de solucion.io",
+				type: "image/jpeg",
+			},
+			{ url: "https://picsum.photos/1200/630" },
+			{ url: "https://picsum.photos/4096/4096" },
+		],
+		site_name: "solucion.io",
+	},
+	twitter: {
+		handle: "@solucion.io",
+		site: "@solucion.io",
+		cardType: "summary_large_image",
+	},
+};
+---
+
+<BaseLayout seo={seo}>
+	<Articles />
+</BaseLayout>
