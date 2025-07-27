@@ -6,6 +6,8 @@ import { getLangFromUrl, useTranslations, useTranslatedPath } from "@i18n/utils"
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
+
+const showForm = false; // Set to true to show the contact form
 ---
 
 <section class="isolate px-6 py-24 sm:py-32 lg:px-8">
@@ -25,6 +27,7 @@ const translatePath = useTranslatedPath(lang);
 				<a href="https://www.youtube.com/@Solucion-io" target="_blank" class="text-blue-600 hover:underline">YouTube</a>
 			</div>
 		</div>
+		{showForm && (
 		<form data-static-form-name="contact" class="mx-auto max-w-2xl pt-12 lg:pt-20">
 			<div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
 				<div class="form-field sm:col-span-2">
@@ -60,6 +63,7 @@ const translatePath = useTranslatedPath(lang);
 				</div>
 			</div>
 		</form>
+		)}
 	</div>
 </section>
 
